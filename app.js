@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 require('dotenv/config');
 const cors = require('cors');
 // Import Routers
-const postsRoute = require('./routes/posts');
+const teamsRoute = require('./routes/teams');
 app.use(cors());
 app.use(bodyParser.json())
 
@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 
 
 //Middlewares
-app.use('/posts', postsRoute)
+app.use('/teams', teamsRoute)
 
 
 // connect to DB

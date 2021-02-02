@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
-const PostSchema = mongoose.Schema({
-   title: {
+const TeamSchema = mongoose.Schema({
+   team_name: {
       type: String,
       required: true
    },
-   description: {
-      type: String,
+   _id: {
+      type: Number,
       required: true
    },
    date: {
@@ -15,4 +15,4 @@ const PostSchema = mongoose.Schema({
    }
 })
 
-module.exports = mongoose.model('Posts', PostSchema);
+module.exports = mongoose.model('Teams', TeamSchema);
