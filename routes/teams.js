@@ -16,6 +16,9 @@ router.post('/', async (req, res) => {
    });
    try {
       const savedTeam = await newTeam.save();
+      console.log(savedTeam);
+      const savedData = await newData.save();
+      console.log(savedData);
       res.json(savedTeam);
    } catch (error) {
       res.json({ message: error })
